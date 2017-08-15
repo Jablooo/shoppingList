@@ -24,27 +24,27 @@ answer = gets.chomp
 answer.downcase!
 
 if answer == "y"
-puts "ok how many more items?"
-answer2 = gets.chomp.to_i
+  puts "ok how many more items?"
+  answer2 = gets.chomp.to_i
 
-counter = 0
+  counter = 0
 
-until counter == answer2
-  counter += 1
-  puts "What else do you need?"
-  item4 = gets.chomp
-  item4.downcase!
-  shoppingList.push(item4)
-end
+  until counter == answer2
+    counter += 1
+    puts "What else do you need?"
+    item4 = gets.chomp
+    item4.downcase!
+    shoppingList.push(item4)
+  end
 
-count = shoppingList.length
-puts "Ok, you have #{count} in your list. They are:
-#{shoppingList}"
+  count = shoppingList.length
+  puts "Ok, you have #{count} in your list. They are:"
+  puts "#{shoppingList}"
 
 else answer == "n"
   count = shoppingList.length
-  puts "Ok, you have #{count} in your list. They are:
-#{shoppingList}"
+  puts "Ok, you have #{count} in your list. They are:"
+  puts "#{shoppingList}"
 end
 
 
